@@ -1,0 +1,105 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #2c0d0d, #660000, #000000);
+  color: white;
+}
+
+/* Header */
+header {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1rem 2rem;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logo-section h1 {
+  font-size: 1.4rem;
+  color: #fff;
+  margin: 0;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 per row */
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Product Box */
+.product {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+  height: 420px; /* slightly taller for vertical images */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.product:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Product Image */
+.product img {
+  width: auto;              /* keep natural width */
+  max-width: 100%;          /* don’t overflow horizontally */
+  height: 300px;            /* fixed height */
+  object-fit: contain;      /* fit image without cropping */
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;           /* center image */
+}
+
+/* Product Name */
+.product h3 {
+  margin-top: 0.8rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+/* Product Button */
+.product-btn {
+  margin-top: auto; /* pushes button to bottom if needed */
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background: #ff4d4d;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.product-btn:hover {
+  background: #ff1a1a;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}

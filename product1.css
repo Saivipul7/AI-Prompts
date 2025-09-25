@@ -1,0 +1,115 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #2c0d0d, #660000, #000000);
+  color: white;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  max-width: 100px;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+/* Product Showcase Layout */
+.product-showcase {
+  /* Container that holds all the .product elements */
+  display: grid;
+  grid-template-columns: 1fr;  /* one column = stack vertically */
+  row-gap: 2rem;
+  padding: 2rem;
+}
+
+/* Product Card */
+.product {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 1rem;
+  gap: 2rem;
+  transition: transform 0.3s ease;
+  margin-bottom: 0; /* remove extra bottom margin, handled by grid row-gap */
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+.product img {
+  width: 40%;
+  max-width: 300px;
+  border-radius: 10px;
+  object-fit: cover; /* ensures image scales well */
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-info h3 {
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+}
+
+.product-info p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.product-btn {
+  padding: 10px 20px;
+  background: #ff4500;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.product-btn:hover {
+  background: #e63e00;
+}
+
+/* Footer */
+footer {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Responsive tweaks (optional) */
+@media (max-width: 768px) {
+  .product {
+    flex-direction: column;
+    text-align: center;
+  }
+  .product img {
+    width: 80%;
+    max-width: none;
+  }
+  /* .product-info {
+    /* maybe smaller text or reduced padding */
+}
